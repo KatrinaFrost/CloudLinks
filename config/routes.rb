@@ -9,15 +9,15 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   get '/profile' => 'profile#index'
-  get '/profile/create' => 'profile#create' # TODO this isn't needed. only edit is.
+  get '/profile/create' => 'profile#create' # this isn't needed. only edit is.
 
   get '/links/feed' => 'links#feed'
   get '/links/new' => 'links#new'
 
-  get '/genres' => 'genres#index'
-  get '/genres/new' => 'genres#new'
+  # get '/genres' => 'genres#index'
+  # get '/genres/new' => 'genres#new'
   post '/genres/create' => 'genres#create'
-  delete '/genres/destroy' => 'genres#destroy'
+  # delete '/genres/destroy' => 'genres#destroy'
 
   # to get the links working we must define each 'url#view'
 

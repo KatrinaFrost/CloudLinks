@@ -7,9 +7,9 @@ class GenresController < ApplicationController
   end
 
   def create
-    # FIXME do we need to assign the users id to the new gener?
+    # FIXME do we need to assign the users id to the new genre?
     genre = Genre.create :name => params[:name]
-    redirect_to genre_path(genre.id)
+    redirect_to genres_path
     # redirect_to planet_path(planet.id)
   end
 

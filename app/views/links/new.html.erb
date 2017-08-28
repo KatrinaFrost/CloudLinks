@@ -1,1 +1,7 @@
 <h1>New Link</h1>
+
+<nav>
+  <% if @current_user.present? %>
+    <%= link_to "Create Category", genres_create_path %>
+  <% end %>
+</nav>
