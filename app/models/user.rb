@@ -5,5 +5,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :email, :presence => true, :uniqueness => true
   has_many :genres
-  has_many :links, :through => :genres
+  has_many :links
+  # :through 
+  # => :genres
 end

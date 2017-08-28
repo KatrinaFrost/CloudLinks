@@ -1,1 +1,10 @@
 <h1>Genres all</h1>
+
+<%= render :partial => 'form' %>
+
+<% @genres.each do |g| %>
+<p><%=g.name %></p>
+<p><%= g.link %></p>
+<p><%=g.description%></p>
+<
+<% end %>

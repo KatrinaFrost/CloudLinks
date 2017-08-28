@@ -1,4 +1,4 @@
 class Link < ApplicationRecord
-  belongs_to :user
-  belongs_to :genres 
+  belongs_to :user, optional: true
+  belongs_to :genres, optional: true 
 end

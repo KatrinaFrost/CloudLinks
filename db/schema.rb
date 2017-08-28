@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170826025618) do
 
   create_table "genres", force: :cascade do |t|
     t.string "description"
-    t.string "user"
+    t.string "user_id"
     t.string "display"
     t.string "name"
     t.datetime "created_at", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170826025618) do
     t.string "link_display_name"
     t.string "display_description"
     t.string "display_url"
-    t.integer "category_id"
+    t.integer "genre_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

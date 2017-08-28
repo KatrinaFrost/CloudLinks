@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   get '/links/new' => 'links#new'
 
   # get '/genres' => 'genres#index'
-  # get '/genres/new' => 'genres#new'
+  get '/genres/new' => 'genres#new'
   post '/genres/create' => 'genres#create'
-  # delete '/genres/destroy' => 'genres#destroy'
+  delete '/genres/destroy' => 'genres#destroy'
+
+
 
   # to get the links working we must define each 'url#view'
 
