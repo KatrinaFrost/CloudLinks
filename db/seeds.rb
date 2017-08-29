@@ -7,6 +7,8 @@ l1 = Link.create :link_display_name => 'sausage dog', :display_description => 'd
 
 Genre.destroy_all
 g1 = Genre.create :description => 'dog in a bun', :name => 'dog'
+g1 = Genre.create :description => 'cat in a hat', :name => 'cat'
+g1 = Genre.create :description => 'wheelie', :name => 'hamster'
 
 u1.links << l1
 g1.links << l1

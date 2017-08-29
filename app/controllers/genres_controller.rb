@@ -7,13 +7,12 @@ class GenresController < ApplicationController
   end
 
   def new
-    @genre = @genre.new
+    @genre = Genre.new
   end
 
   def create
-  genre = Genre.create :name => params[:name]
+    genre = Genre.create :name => params[:genre][:name], :description => params[:genre][:description]
     redirect_to genres_path
-    # redirect_to planet_path(planet.id)
   end
 
   def destroy

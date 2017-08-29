@@ -5,7 +5,6 @@ class CreateGenres < ActiveRecord::Migration[5.1]
       t.string :user_id
       t.string :display
       t.string :name
-
       t.timestamps
     end
   end

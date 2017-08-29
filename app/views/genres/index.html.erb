@@ -1,10 +1,25 @@
-<h1>Genres all</h1>
+<!-- ___________ Shows all genres saved by the user ____________________ -->
 
-<%= render :partial => 'form' %>
+<!--http://localhost:3000/genres  -->
+
+<h1>All Categories</h1>
+
+<!-- Nav bar -->
+<ul>
+  <li><a href="/links/new">Add new link</a></li>
+  <li><a href="/genres/new">Create new Category</a></li>
+  <li><a href="/links">Saved Links</a></li>
+  <li><a href="/genres">Saved Categories</a></li>
+</ul>
 
 <% @genres.each do |g| %>
+
+<!-- Displays the name user enters in form -->
 <p><%=g.name %></p>
-<p><%= g.link %></p>
+
+<!-- Displays the description user enters in form -->
 <p><%=g.description%></p>
-<
+
+<hr>
+
 <% end %>

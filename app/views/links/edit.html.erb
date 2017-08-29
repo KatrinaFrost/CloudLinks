@@ -1,0 +1,8 @@
+<h1>Edit Link</h1>
+
+<%= form_for @link do |l| %>
+  <%= l.label :link_display_name %>
+  <%= l.label :display_description %>
+  <%= l.label :display_url %>
+  <%= l.submit %>
+<% end %>

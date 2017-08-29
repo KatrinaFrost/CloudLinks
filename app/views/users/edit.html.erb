@@ -1,8 +1,22 @@
 <h1>Edit User</h1>
 
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+<%= form_for :users do |u| %>
+  <p>
+    <%= u.label :name %><br>
+    <%= u.text_field :name %>
+  </p>
 
-  <%= f.submit %>
+  <p>
+    <%= u.label :email %><br>
+    <%= u.text_area :email %>
+  </p>
+
+  <p>
+    <%= u.label :pic %><br>
+    <%= u.text_area :pic %>
+  </p>
+
+  <p>
+    <%= u.submit %>
+  </p>
 <% end %>

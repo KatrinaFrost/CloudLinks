@@ -1,0 +1,31 @@
+<!-- http://localhost:3000/links/new -->
+
+<%= form_for @link do |l| %>
+
+  <fieldset>
+    <%= l.label :link_display_name %>
+    <%= l.text_field :link_display_name, :autofocus => true %>
+  </fieldset>
+
+  <fieldset>
+    <%= l.label :display_description %>
+    <%= l.text_field :display_description %>
+  </fieldset>
+
+<!-- Creates drop down menu in links new and can choose
+    a genre that has already been created -->
+  <fieldset>
+    <%= l.select(:genre_id, Genre.all.pluck(:name, :id)) %>
+  </fieldset>
+
+  <fieldset>
+    <%= l.label :display_url %>
+    <%= l.url_field :display_url %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= l.submit %>
+  </fieldset>
+
+<% end %>

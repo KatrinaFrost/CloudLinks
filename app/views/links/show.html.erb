@@ -1,13 +1,30 @@
-<h1>Show all links</h1>
+<!-- ___________ Allows user to create and store link ____________________ -->
 
-<h2> To Do's </h2>
+<!-- http://localhost:3000/links/create -->
 
-<li>Show all links from user</li>
+<h1>Create new link blah</h1>
 
-<li>create new link in nav bar</li>
+this is where my links and categories are going to go
 
-<li>Go back to profile</li>
+<% @genres.each do |g| %>
 
-<li>log out</li>
+<p><%=g.name%></p>
 
-<li>Scrap web</li>
+<p><%=g.description%></p>
+
+<p>User ID: <%=g.user_id%></p>
+<p>Genre ID: <%=g.id%></p>
+
+<% end %>
+
+<% @links.each do |l| %>
+
+<p><%=l.link_display_name%></p>
+<p><%=l.display_description%></p>
+<p><%=l.display_url%></p>
+
+<p>Genre:ID <%=l.genre_id%></p>
+
+<p>User:ID <%=l.user_id%></p>
+
+<% end %>

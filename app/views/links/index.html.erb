@@ -1,1 +1,20 @@
-<h1>Links </h1>
+<!-- ___________ Shows all links saved by the user ____________________ -->
+
+<!-- http://localhost:3000/links -->
+
+<h1>Shows All Links</h1>
+
+<% @links.each do |l| %>
+
+<!-- Displays the name user enters in form -->
+<p><%=l.link_display_name %></p>
+
+<!-- Displays the description user enters in form -->
+<p><%=l.display_description%></p>
+
+<!-- Displays the URL user enters in form -->
+<p><%=l.display_url%></p>
+
+<hr>
+
+<% end %>
