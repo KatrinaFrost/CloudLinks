@@ -1,5 +1,13 @@
 <h1>All Users</h1>
 
+<ul>
+  <li><a href="/profile">Profile</a></li>
+  <li><a href="/pages/feed">Cloud Feed</a></li>
+  <li><a href="/links/new">New Link</a></li>
+  <li><a href="/genres/new">New Category</a></li>
+  <li><a href="/links">Your Links</a></li>
+</ul>
+
 <% @users.each do |user| %>
   <p><%= user.email %></p>
 <% end %>

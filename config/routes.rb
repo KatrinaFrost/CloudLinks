@@ -12,5 +12,9 @@ Rails.application.routes.draw do
 
   get '/profile' => 'profile#index'
   get '/profile/create' => 'profile#create'
+  post 'profile/create' => 'profile#index'
+
+  get '/pages/feed' => 'pages#feed'
+
 
 end
