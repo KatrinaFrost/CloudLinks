@@ -1,5 +1,3 @@
-<h1>Edit User</h1>
-
 <ul>
   <li><a href="/profile">Profile</a></li>
   <li><a href="/pages/feed">Cloud Feed</a></li>
@@ -8,7 +6,9 @@
   <li><a href="/links">Your Links</a></li>
 </ul>
 
-<%= form_for :users do |u| %>
+<h1>Update Profile</h1>
+
+<%= form_for @current_user do |u| %>
   <p>
     <%= u.label :name %><br>
     <%= u.text_field :name %>
@@ -16,7 +16,7 @@
 
   <p>
     <%= u.label :email %><br>
-    <%= u.text_area :email %>
+    <%= u.email_field :email %>
   </p>
 
   <p>

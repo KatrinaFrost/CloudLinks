@@ -1,9 +1,6 @@
 <!-- ___________ Shows all genres saved by the user ____________________ -->
 
 <!--http://localhost:3000/genres  -->
-
-<h1>All Categories</h1>
-
 <!-- Nav bar -->
 <ul>
   <li><a href="/profile">Profile</a></li>
@@ -13,10 +10,13 @@
   <li><a href="/genres">Your Categories</a></li>
 </ul>
 
+<h1>All Categories</h1>
+
 <% @genres.each do |g| %>
 
 <!-- Displays the name user enters in form -->
-<p><%=g.name %></p>
+
+<p class="genreHeader"><%=g.name %></p>
 
 <!-- Displays the description user enters in form -->
 <p><%=g.description%></p>
