@@ -6,3 +6,19 @@
 </ul>
 
 <h1>Feed - shows all links and all categories of users (most popular)</h1>
+
+for every category and every link inside the category if the
+id of the category matches the ID of the link
+
+<% @genres.each do |g| %>
+  <div class="genre">
+    <p style="color:red"><%= g.name %></p>
+    <% @links.each do |l| %>
+    <% if g.id === l.genre %>
+      <div class="link">
+        <%= l.link_display_name %>
+      </div>
+    <% end if %>
+  </div>
+  <% end %>
+<% end %>
