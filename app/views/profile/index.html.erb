@@ -8,9 +8,19 @@
 <h1>Profile Page</h1>
 
 <p>Shows profile picture, saved links, categories, button to news feed</p>
-<br>
-<br>
-<br>
+
+<% @links.each do |l| %>
+
+<!-- Displays the name user enters in form -->
+<p><%=l.link_display_name %></p>
+
+<!-- Displays the description user enters in form -->
+<p><%=l.display_description%></p>
+
+<!-- Displays the URL user enters in form -->
+<p><%=l.display_url%></p>
+
+<% end  %>
 
 TO dos
 

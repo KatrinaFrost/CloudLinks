@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # ------------- Log in ------------------- #
   get '/login' => 'session#new'
-  post '/login' => 'profile#index'
+  post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
   # ------------- Profile ------------------- #
