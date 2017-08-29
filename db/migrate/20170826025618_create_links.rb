@@ -4,9 +4,8 @@ class CreateLinks < ActiveRecord::Migration[5.1]
       t.string :link_display_name
       t.string :display_description
       t.string :display_url
-      t.integer :genre_id
-      t.integer :user_id
-
+      t.integer :genre
+      t.integer :user
       t.timestamps
     end
   end

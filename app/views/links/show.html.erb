@@ -28,11 +28,11 @@ this is where my links and categories are going to go
 
 <% @links.each do |l| %>
 
-<p><%=l.link_display_name%></p>
-<p><%=l.display_description%></p>
-<p><%=l.display_url%></p>
+<p>Link Display: <%=l.link_display_name%></p>
+<p>Link Desc: <%=l.display_description%></p>
+<p>Link URL: <%=l.display_url%></p>
 
-<p>Genre:ID <%=l.genre_id%></p>
+<p>Genre:ID <%=l.genre%></p>
 
 <p>User:ID <%=l.user_id%></p>
 

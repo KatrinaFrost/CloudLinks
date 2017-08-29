@@ -12,9 +12,8 @@ class LinksController < ApplicationController
   end
 
   def create
-    # Link.create(link_params)
-    # redirect_to links_path
-    link = Link.create :link_display_name => params[:link][:link_display_name], :display_description => params[:link][:display_description]
+    link = Link.create(link_params)
+    #link = Link.create :genre_id => params[:link][:link_display_name], :link_display_name => params[:link][:link_display_name], :display_description => params[:link][:display_description]
     redirect_to links_path
   end
 
@@ -27,7 +26,7 @@ class LinksController < ApplicationController
   end
 
   def link_params
-    params.require(:link).permit(:link_display_name, :genre_id, :display_description, :display_url)
+    params.require(:link).permit(:link_display_name, :genre, :display_description, :display_url)
   end
 
 end
