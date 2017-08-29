@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   resources :users
   resources :genres
   resources :links
-  
-  # ------------- Session ------------------- #
+
+  # ------------- Log in ------------------- #
   get '/login' => 'session#new'
-  post '/login' => 'session#create'
+  post '/login' => 'profile#index'
   delete '/login' => 'session#destroy'
 
   # ------------- Profile ------------------- #
