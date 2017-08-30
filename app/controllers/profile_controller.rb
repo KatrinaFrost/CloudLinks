@@ -2,9 +2,7 @@ class ProfileController < ApplicationController
 
   def index
     @links = Link.all
+    @genres = Genre.all
+    @users = User.all
   end
-
-  def create
-  end
-
 end

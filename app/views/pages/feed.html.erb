@@ -15,7 +15,7 @@ id of the category matches the ID of the link -->
     <p style="color:red"><%= g.name %><br>
       <%= g.description %></p>
     <% @links.each do |l| %>
-    <% if g.id === l.genre %>
+    <% if g.id === l.genres %>
       <div class="link">
         <%= l.link_display_name %>
         <%= l.display_description %>

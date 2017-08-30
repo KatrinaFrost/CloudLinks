@@ -16,7 +16,7 @@
   </fieldset>
 
   <fieldset>
-    <%= l.select(:genre, Genre.all.pluck(:name, :id)) %>
+    <%= l.select(:genres, Genre.all.pluck(:name, :id)) %>
   </fieldset>
   <!-- The above ^ Creates drop down menu in links new and can choose
       a genre that has already been created -->

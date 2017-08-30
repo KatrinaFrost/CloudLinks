@@ -7,15 +7,25 @@
 
 <h1>Profile Page</h1>
 
-<p>Shows profile picture, categories, button to news feed</p>
+<p>NEED TO ADD IMAGE</P>
 
 <!--________________ Shows user name and pic __________________ -->
 
-<!--  NEED TO ADD IN -->
+<% @users.each do |t| %>
+<hr>
+
+<!-- Displays the name user enters in form -->
+<p><%=t.name %></p>
+
+<!-- Displays the description user enters in form -->
+<p><%=t.pic%></p>
+
+<% end  %>
 
 <!--________________ Shows links on page _____________________ -->
 
 <% @links.each do |l| %>
+
 <hr>
 
 <!-- Displays the name user enters in form -->
