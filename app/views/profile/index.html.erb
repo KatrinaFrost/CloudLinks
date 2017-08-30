@@ -7,9 +7,11 @@
 
 <h1>Profile Page</h1>
 
-<p>Shows profile picture, saved links, categories, button to news feed</p>
+<p>Shows profile picture, categories, button to news feed</p>
 
+<!-- Shows Links On Page -->
 <% @links.each do |l| %>
+<hr>
 
 <!-- Displays the name user enters in form -->
 <p><%=l.link_display_name %></p>
@@ -21,6 +23,8 @@
 <p><%=l.display_url%></p>
 
 <% end  %>
+
+<hr>
 
 TO dos
 
