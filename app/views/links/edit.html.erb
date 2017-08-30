@@ -7,11 +7,16 @@
   <li><a href="/genres">Your Categories</a></li>
 </ul>
 
+<!-- Creates edit form and updates -->
+
 <h1>Edit Link</h1>
 
 <%= form_for @link do |l| %>
   <%= l.label :link_display_name %>
+  <%= l.text_field :link_display_name %>
   <%= l.label :display_description %>
+  <%= l.text_field :display_description %>
   <%= l.label :display_url %>
+  <%= l.url_field :display_url %>
   <%= l.submit %>
 <% end %>

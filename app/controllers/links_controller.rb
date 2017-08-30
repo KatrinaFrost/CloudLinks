@@ -20,6 +20,17 @@ class LinksController < ApplicationController
   def show
     @links = Link.all
     @genres = Genre.all
+    @link = Link.find params[:id] 
+  end
+
+  def edit
+    @link = Link.find params[:id]
+  end
+
+  def update
+    link = Link.find params[:id]
+    link.update link_params
+    redirect_to link
   end
 
   def destroy

@@ -1,4 +1,4 @@
-<!-- ___________ Allows user to create and store link ____________________ -->
+<!-- ___________ Allows user to edit stored links__________________ -->
 
 <!-- http://localhost:3000/links/create -->
 
@@ -11,29 +11,8 @@
   <li><a href="/genres">Saved Categories</a></li>
 </ul>
 
-<h1>Create new link blah</h1>
+<!-- Displays edited link information -->
 
-this is where my links and categories are going to go
-
-<% @genres.each do |g| %>
-
-<p><%=g.name%></p>
-
-<p><%=g.description%></p>
-
-<p>User ID: <%=g.user_id%></p>
-<p>Genre ID: <%=g.id%></p>
-
-<% end %>
-
-<% @links.each do |l| %>
-
-<p>Link Display: <%=l.link_display_name%></p>
-<p>Link Desc: <%=l.display_description%></p>
-<p>Link URL: <%=l.display_url%></p>
-
-<p>Genre:ID <%=l.genre%></p>
-
-<p>User:ID <%=l.user_id%></p>
-
-<% end %>
+<%= @link.link_display_name %>
+<%= @link.display_description %>
+<%= @link.display_url %>

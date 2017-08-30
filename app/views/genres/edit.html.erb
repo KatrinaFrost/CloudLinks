@@ -1,4 +1,4 @@
-<!-- _____________ Allows user to edit category/genre _________________ -->
+<!-- _________________ Allows User to edit genre ____________________ -->
 <ul>
   <li><a href="/profile">Profile</a></li>
   <li><a href="/pages/feed">Cloud Feed</a></li>
@@ -7,10 +7,15 @@
   <li><a href="/genres">Your Categories</a></li>
 </ul>
 
-<h1>Edit Category</h1>
+<!-- Creates edit form and updates -->
+
+<h1>Edit Genre</h1>
 
 <%= form_for @genre do |f| %>
   <%= f.label :name %>
+  <%= f.text_field :name %>
   <%= f.label :description %>
+  <%= f.text_field :description %>
+
   <%= f.submit %>
 <% end %>

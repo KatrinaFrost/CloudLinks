@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   # ------------- Feed ------------------- #
   get '/pages/feed' => 'pages#feed'
 
+  # ------------- Genres ------------------- #
+  get '/genres' => 'genres#edit' 
+
 end
