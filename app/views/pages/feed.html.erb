@@ -5,18 +5,21 @@
 <li><a href="/links">Your Links</a></li>
 </ul>
 
-<h1>Feed - shows all links and all categories of users (most popular)</h1>
+<h1>Cloud Links Feed</h1>
 
 <!-- For every category and every link inside the category if the
 id of the category matches the ID of the link -->
 
 <% @genres.each do |g| %>
   <div class="genre">
-    <p style="color:red"><%= g.name %></p>
+    <p style="color:red"><%= g.name %><br>
+      <%= g.description %></p>
     <% @links.each do |l| %>
     <% if g.id === l.genre %>
       <div class="link">
         <%= l.link_display_name %>
+        <%= l.display_description %>
+
       </div>
     <% end if %>
   </div>

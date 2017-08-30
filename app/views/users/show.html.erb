@@ -1,0 +1,6 @@
+<h1>Show</h1>
+
+<%= @user.name %>
+<% @user.links.each do |l| %>
+<p><%= l.link_display_name %></p>
+<% end  %>

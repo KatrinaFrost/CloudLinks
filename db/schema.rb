@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20170826025618) do
     t.string "link_display_name"
     t.string "display_description"
     t.string "display_url"
-    t.integer "genre"
-    t.integer "user"
+    t.integer "genre_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
