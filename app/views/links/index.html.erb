@@ -22,7 +22,12 @@
 <!-- Displays the URL user enters in form -->
 <p>URL: <%=l.display_url%></p>
 
-<p>Genre: <%=l.genres%></p>
+<!-- changed today -->
+<p>Genre: <%=l.genre.name %></p>
+<% unless l.genre.nil? %>
+<p>Genre: <%=l.genre.name %></p>
+<% end %>
+
 
 <!-- <a href="/links/1/edit"><button>EDIT</button></a> -->
 <%= link_to 'EDIT', edit_link_path(l) %>

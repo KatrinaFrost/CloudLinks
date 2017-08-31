@@ -10,18 +10,18 @@
 <!-- For every category and every link inside the category if the
 id of the category matches the ID of the link -->
 
+hello...
+
 <% @genres.each do |g| %>
   <div class="genre">
     <p style="color:red"><%= g.name %><br>
       <%= g.description %></p>
-    <% @links.each do |l| %>
-    <% if g.id === l.genres %>
+      <!-- because in your models Genre has_many :links you can access them via the association -->
+    <% g.links.each do |l| %>
       <div class="link">
         <%= l.link_display_name %>
         <%= l.display_description %>
-
       </div>
-    <% end if %>
+    <% end %>
   </div>
-  <% end %>
 <% end %>

@@ -13,6 +13,17 @@
 
 <!-- Displays edited link information -->
 
-<%= @link.link_display_name %>
-<%= @link.display_description %>
-<%= @link.display_url %>
+<% @genres.each do |g| %>
+  <div class="genre">
+    <p style="color:red"><%= g.name %><br>
+      <%= g.description %></p>
+    <% @links.each do |l| %>
+    <% if g.id === l.genre_id %>
+      <div class="link">
+        <%= l.link_display_name %>
+        <%= l.display_description %>
+      </div>
+    <% end if %>
+  </div>
+  <% end %>
+<% end %>
