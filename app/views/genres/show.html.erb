@@ -1,24 +1,4 @@
-<!-- _____________ Allows user to edit category/genre _________________ -->
 <ul>
-  <li><a href="/profile">Profile</a></li>
-
+  <li><a href="/links/new">New Link</a></li>
+  <li><a href="/genres/new">New Category</a></li>
 </ul>
-
-<h1>Updated genre</h1>
-
-Hello
-
-<% @genres.each do |g| %>
-  <div class="genre">
-    <p style="color:red"><%= g.name %><br>
-      <%= g.description %></p>
-    <% @links.each do |l| %>
-    <% if g.id === l.genre_id %>
-      <div class="link">
-        <%= l.link_display_name %>
-        <%= l.display_description %>
-      </div>
-    <% end if %>
-  </div>
-  <% end %>
-<% end %>

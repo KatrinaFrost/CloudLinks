@@ -20,8 +20,6 @@ class GenresController < ApplicationController
   end
 
   def show
-    @genres = Genre.all
-    @links = Link.all
     @genre = Genre.find params[:id]
   end
 
@@ -29,6 +27,8 @@ class GenresController < ApplicationController
     @genre = Genre.find params[:id]
   end
 
+  # @genres = Genre.all
+  # @links = Link.all
   def update
     genre = Genre.find params[:id]
     genre.update genre_params
