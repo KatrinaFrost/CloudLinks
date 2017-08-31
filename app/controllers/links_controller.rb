@@ -14,7 +14,7 @@ class LinksController < ApplicationController
   def create
     link = Link.create(link_params)
     #link = Link.create :genre_id => params[:link][:link_display_name], :link_display_name => params[:link][:link_display_name], :display_description => params[:link][:display_description]
-    redirect_to links_path
+    redirect_to profile_path
   end
 
   def show
@@ -29,14 +29,12 @@ class LinksController < ApplicationController
   def update
     link = Link.find params[:id]
     link.update link_params
-    redirect_to link
-  end
-
-  def destroy
+    # redirect_to link
+    redirect_to profile_path
   end
 
   def link_params
-    params.require(:link).permit(:link_display_name, :genre, :display_description, :display_url)
+    params.require(:link).permit(:link_display_name, :genre_id, :display_description, :display_url)
   end
 
 end

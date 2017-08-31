@@ -1,36 +1,38 @@
+<!-- NO LONGER NEEDED -->
+
+
 <!-- ___________ Shows all links saved by the user ____________________ -->
 
 <!-- http://localhost:3000/links -->
 
-<ul>
+<!-- <ul>
   <li><a href="/profile">Profile</a></li>
   <li><a href="/pages/feed">Cloud Feed</a></li>
   <li><a href="/links/new">New Link</a></li>
   <li><a href="/genres/new">New Category</a></li>
-</ul>
+</ul> -->
 
-<h1>Shows All Links</h1>
+<!-- <h1>Shows All Links</h1>
 
-<% @links.each do |l| %>
+<% @links.each do |l| %> -->
 
 <!-- Displays the name user enters in form -->
-<p>Display Link Name: <%=l.link_display_name %></p>
+<!-- <p>Display Link Name: <%=l.link_display_name %></p> -->
 
 <!-- Displays the description user enters in form -->
-<p>Display Link Desc: <%=l.display_description%></p>
+<!-- <p>Display Link Desc: <%=l.display_description%></p> -->
 
 <!-- Displays the URL user enters in form -->
-<p>URL: <%=l.display_url%></p>
+<!-- <p>URL: <%=l.display_url%></p> -->
 
 <!-- changed today -->
+<!-- <% unless l.genre.nil? %>
 <p>Genre: <%=l.genre.name %></p>
-<% unless l.genre.nil? %>
-<p>Genre: <%=l.genre.name %></p>
-<% end %>
+<% end %> -->
 
 
 <!-- <a href="/links/1/edit"><button>EDIT</button></a> -->
-<%= link_to 'EDIT', edit_link_path(l) %>
+<!-- <%= link_to 'EDIT', edit_link_path(l) %>
 <hr>
 
-<% end %>
+<% end %> -->

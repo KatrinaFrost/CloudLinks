@@ -1,42 +1,69 @@
 <ul>
-  <li><a href="/pages/feed">Cloud Feed</a></li>
   <li><a href="/links/new">New Link</a></li>
   <li><a href="/genres/new">New Category</a></li>
-  <li><a href="/links">Your Links</a></li>
 </ul>
 
-<h1>Profile Page</h1>
-
-<p>NEED TO ADD IMAGE</P>
-
-<!--________________ Shows user name and pic __________________ -->
-
-<% @users.each do |t| %>
-<hr>
-
-<!-- Displays the name user enters in form -->
-<p><%=t.name %></p>
-
-<!-- Displays the description user enters in form -->
-<p><%=t.pic%></p>
-
-<% end  %>
-
-<!--________________ Shows links on page _____________________ -->
-
-<% @links.each do |l| %>
-
-<hr>
-
-<!-- Displays the name user enters in form -->
-<p><%=l.link_display_name %></p>
-
-<!-- Displays the description user enters in form -->
-<p><%=l.display_description%></p>
-
-<!-- Displays the URL user enters in form -->
-<p><%=l.display_url%></p>
-
-<% end  %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="category_container">
+        <% @genres.each do |g| %>
+          <div class="genre">
+            <button class="btn btn-primary" type="button">
+            <%= g.name %>
+            <span class="badge">0</span>
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="category_container">
+        <% @genres.each do |g| %>
+          <div class="genre">
+            <div class="genre-information media-body">
+              <div class="pull-left">
+                <div class="media-heading">
+                  <h2 style="color:red"><%= g.name %></h2>
+                  <p><%= g.description %></p>
+                </div>
+              </div>
+              <div class="pull-right">
+                <%= link_to edit_genre_path(g) do %>
+                  <span>EDIT </span><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                <% end %>
+              </div>
+            </div>
+            <hr>
+            <% g.links.each do |l| %>
+            <div class="link">
+              <div class="media">
+                <div class="media-left media-middle">
+                  <a href="#">
+                    <img class="media-object" src="https://unsplash.it/100/100/?random" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <div class="pull-left">
+                    <h4 class="media-heading"><%= l.link_display_name %></h4>
+                    <p><%= l.display_description %></p>
+                    <a href="<%=l.display_url%>" target="_new"><%=l.display_url%></a>
+                  </div>
+                  <div class="pull-right">
+                    <%= link_to edit_link_path(l) do %>
+                      <span>EDIT </span><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <hr>

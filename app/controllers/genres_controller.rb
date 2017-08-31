@@ -13,7 +13,7 @@ class GenresController < ApplicationController
   def create
     genre = Genre.create(genre_params);
     # genre = Genre.create :name => params[:genre][:name], :description => params[:genre][:description]
-    redirect_to genres_path
+    redirect_to profile_path
   end
 
   def destroy
@@ -32,7 +32,7 @@ class GenresController < ApplicationController
   def update
     genre = Genre.find params[:id]
     genre.update genre_params
-    redirect_to genre
+    redirect_to profile_path
   end
 
   def genre_params

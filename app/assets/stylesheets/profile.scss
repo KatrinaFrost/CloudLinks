@@ -35,3 +35,12 @@ li a:hover:not(.active) {
 .genreHeader {
   color: green;
 }
+
+.category_container {
+  border: 1px lightgrey solid;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
