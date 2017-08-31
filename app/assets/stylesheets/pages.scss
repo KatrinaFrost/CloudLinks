@@ -1,25 +1,6 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// ul {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     background-color: #333;
-// }
-//
-// li {
-//     float: left;
-// }
-//
-// li a {
-//     display: block;
-//     color: white;
-//     text-align: center;
-//     padding: 14px 16px;
-//     text-decoration: none;
-// }
 
 li a:hover:not(.active) {
     background-color: #111;
@@ -27,4 +8,26 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #4CAF50;
+}
+
+.genre_edit_container {
+  border: 1px lightgrey solid;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: white;
+  a {
+    margin: 5px 0;
+    text-align: left;
+    width: 100%;
+    .badge {
+    background-color: #ec5197;
+    float: right;
+  fieldset {
+    width: 100%;
+      }
+    }
+  }
 }

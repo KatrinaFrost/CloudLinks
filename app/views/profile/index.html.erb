@@ -1,19 +1,31 @@
+
+<!-- In bootstrap a container and row are used to scaffold a responsive design -->
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <!-- This creates a column that applies to medium size and larger browsers and provides a column width of 33.3% -->
+    <div class="col-md-4 left_panel">
       <div class="category_container">
+        <!-- If genres exsit then loop through and load into view -->
+        <% if @genres.present? %>
         <% @genres.each do |g| %>
           <div class="genre">
             <%= link_to profile_path({:genre_id => g.id}), { class: "btn btn-default" } do %>
               <span><%= g.name %></span>
+              <!-- This creates a badge and adds the amount of links found by the length -->
               <span class="badge"><%= g.links.size %></span>
             <% end %>
           </div>
         <% end %>
+        <% else %>
+        <!-- When no categories are found display message -->
+          <p>No Categories found.</p>
+        <% end %>
       </div>
+      <!-- Making a container for the buttons and using bootstrap button styling -->
       <div class="category_container">
         <a type="button" class="btn btn-default" href="/links/new">
           <span>New Link</span>
+          <!-- Plus icon -->
           <span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span>
         </a>
         <a type="button" class="btn btn-default" href="/genres/new">
@@ -22,11 +34,14 @@
         </a>
       </div>
     </div>
-    <div class="col-md-8">
+    <!-- This is to the remainder of the width to the content of the page -->
+    <div class="col-md-8 right_panel">
       <div class="category_container">
+        <% if @genre.present? %>
         <div class="genre">
           <div class="genre-information media-body">
             <div class="pull-left">
+              <!-- Media heading is a bootsrap style, makes it look nice :) -->
               <div class="media-heading">
                 <h2><%= @genre.name %></h2>
                 <p><%= @genre.description %></p>
@@ -39,6 +54,7 @@
             </div>
           </div>
           <hr>
+          <!-- loops through links and loads into view -->
           <% @genre.links.each do |l| %>
           <div class="link">
             <div class="media">
@@ -47,6 +63,7 @@
                   <img class="media-object" src="https://unsplash.it/100/100/?random" alt="...">
                 </a>
               </div>
+              <!-- Displays link titles -->
               <div class="media-body">
                 <div class="pull-left">
                   <h4 class="media-heading"><%= l.link_display_name %></h4>
@@ -64,6 +81,9 @@
           <hr>
           <% end %>
         </div>
+        <% else %>
+          Please Create your first category.
+        <% end %>
       </div>
     </div>
   </div>
