@@ -1,4 +1,4 @@
-##Project 1 - Cloud Links 
+Project 1 - Cloud Links 
 
 #Imagine a world with one place you can store and organise those links? 
 
@@ -8,9 +8,9 @@ Your tutor or boss chucks extra reading links left right and centre, these links
 
 ______________________________________________________________________________________________________________________________
 
-#My project uses, HTML, Bootstrap and Ruby on Rails. 
+My project uses, HTML, Bootstrap and Ruby on Rails. 
 
-#I also used:
+I also used:
 
 - The command line
 - Source control - git hub
@@ -22,7 +22,7 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________
 
-#What issues did I experience and what I did not get working?
+What issues did I experience and what I did not get working?
 
 - Had a trouble understanding Associations and linking the 3 models together
 - Delete button was removed as I could not get this working 
@@ -31,7 +31,7 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________
 
-#What I would like to add?
+What I would like to add?
 
 - Social media icons
 - Clean, condensed code
@@ -43,7 +43,7 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________
 
-#What I would do next time?
+What I would do next time?
 
 - Take a bit more time in understanding what I want the app to do and achieve
 - Spend more time to understand the navigation and what I need to do to connnect the models together
@@ -54,7 +54,7 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________
 
-#Acknowledgments
+Acknowledgments
 
 http://rubyonrails.org/ - for a great guide to all things Ruby
 https://deliveroo.com.au/ - for keeping me fed and sane
@@ -69,11 +69,11 @@ Nick T - for helping me on the night before project showcase to implement bootst
 
 ______________________________________________________________________________________________________________________________
 
-#License
+License
 
-#The MIT License (MIT)
+The MIT License (MIT)
 
-#Copyright (c) 2013 Thomas Park
+Copyright (c) 2013 Thomas Park
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
