@@ -4,8 +4,8 @@ class ProfileController < ApplicationController
     @links = Link.all
     @genres = Genre.all
     @users = User.all
-    if params[:id]
-      @genre = Genre.find params[:id]
+    if params[:genre_id]
+      @genre = Genre.find params[:genre_id]
     else
       @genre = Genre.find 1
     end

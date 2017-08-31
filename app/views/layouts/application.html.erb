@@ -10,19 +10,48 @@
 
   <body>
 
-    <nav>
-      <%= link_to 'Home', root_path %>
+    <div class="app-container">
 
-      <% if @current_user.present? %>
-        <%= link_to "Edit profile", edit_user_path(@current_user) %>
-        <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        <%= link_to 'Sign in', login_path %>
-      <% end %>
-    </nav>
+      <div class="nav-container">
+        <div class="container">
+          <nav class="navbar-header">
+            <a href="/" class="navbar-brand">
+              <span>Cloud Links</span>
+              <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+            </a>
+          </nav>
+          <nav class="collapse navbar-collapse hidden-xs">
+            <ul class="nav navbar-nav pull-right">
+              <% if @current_user.present? %>
+              <li><%= link_to 'Edit profile', edit_user_path(@current_user) %></li>
+              <li><%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %></li>
+              <% else %>
+              <li><%= link_to 'Sign up', new_user_path %></li>
+              <li><%= link_to 'Sign in', login_path %></li>
+              <% end %>
+            </ul>
+          </nav>
+          <div class="mobile-nav col-xs-12 visible-xs text-center">
+            <nav>
+              <% if @current_user.present? %>
+              <span><%= link_to 'Edit profile', edit_user_path(@current_user) %></span> |
+              <span><%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %></span>
+              <% else %>
+              <span><%= link_to 'Sign up', new_user_path %></span> |
+              <span><%= link_to 'Sign in', login_path %></span>
+              <% end %>
+            <nav>
+          </div>
+        </div>
+      </div>
 
-    <%= yield %>
+      <%= yield %>
+
+    </div>
+
+    <footer class="footer">
+      <p>Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by Katrina Frost.</p>
+    </footer>
 
   </body>
 </html>
